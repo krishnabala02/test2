@@ -27,5 +27,8 @@ df = pd.read_csv("Bank_churn_modelling - Copy.csv")
 #print(df[["CreditScore", "Balance"]].corr())
 #print(df[["CreditScore", "Balance"]].cov())
 #print(df.loc[(df['CreditScore'] < 500) & (df['Gender'] == "Female")].count())
-print(pd.DataFrame(df["CreditScore"] < 500 & df['Gender'] == "Female"))
-
+#print(pd.DataFrame(df["Gender"] < 500 & df['Gender'] == "Female"))
+#print(df["CreditScore", "Age"].corr())
+df1 = df[["Gender","CreditScore"]]
+print(df[["Gender","CreditScore"]].query('Gender == "Female"'))
+#print(df["Gender"])
